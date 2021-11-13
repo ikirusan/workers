@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1 class="mb-5">Сотрудники компании</h1>
-        <a href="/add"><div class="btn btn-success mb-3">Добавить сотрудника</div></a>
+        <router-link class="btn btn-success mb-3" :to="{name: 'add'}">Добавить сотрудника</router-link>
         <table class="table">
             <thead class="thead-dark">
             <tr>
