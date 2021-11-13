@@ -1,0 +1,14 @@
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,600");
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import url('https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css');
+
+.content{position: relative; background: #f3f3f3;}
+.body{padding: 30px;}
+h1{font-family: Roboto; font-size: 27px; font-weight: 400;}
