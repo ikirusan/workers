@@ -76,6 +76,7 @@
 
                     if(this.workerId != undefined){
                         this.success = true
+
                     }else{
                         this.$router.push({ name: 'index' })
                     }
