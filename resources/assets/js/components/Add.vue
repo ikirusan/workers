@@ -1,6 +1,7 @@
 <template>
     <div>
-        <h1 class="mb-5">Добавление / редактирование сотрудника</h1>
+        <h1 v-if="workerId === undefined" class="mb-5">Добавление сотрудника</h1>
+        <h1 v-else class="mb-5">Редактирование сотрудника</h1>
         <div v-if="errored" class="alert alert-danger">Ошибка загрузки данных!</div>
         <div v-if="success" class="alert alert-success">Данные сохранены!</div>
         <div v-if="loading" class="text-center">
@@ -8,6 +9,7 @@
                 <span class="sr-only">Loading...</span>
             </div>
         </div>
+        <div v-if="!loading">
         <div class="form-group">
             <label for="name">Имя</label>
             <input type="text" name="name" id="name" v-model="name" class="form-control" :class="{'is-invalid': this.$v.name.$error}" v-model.trim="$v.name.$model" placeholder="Укажите имя">
@@ -34,6 +36,7 @@
             <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" v-if="loaded"></span>
         </button>
         <router-link class="btn btn-link" :to="{name: 'index'}">Вернуться</router-link>
+        </div>
     </div>
 </template>
 
