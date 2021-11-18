@@ -64,6 +64,7 @@
                 if(this.$v.$invalid){
                     return false;
                 }
+
                 this.loaded = true
                 axios.post('/api/workers/edit/' + this.workerId, {
                     _method: 'post',
@@ -71,6 +72,7 @@
                     birth: this.birth,
                     prof: this.prof
                 })
+
                 .then(response => {
                     this.loaded = false
 
